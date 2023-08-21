@@ -86,7 +86,7 @@ namespace JATP.API.Controllers
                 sb.Append("Minimum password length shoud be 8" + Environment.NewLine);
             if (!(Regex.IsMatch(password, "[a-z]") && Regex.IsMatch(password, "[A-Z]") && Regex.IsMatch(password, "[0-9]")))
                 sb.Append("Password shoud be Alphanumeric" + Environment.NewLine);
-            if (!Regex.IsMatch(password, "[!,”,#,$,%,&,’,(,),*,+,-,.,/,:,;,<,=,>,?,@,[,\\,^,_,`,{,|,},~,]"))
+            if (!Regex.IsMatch(password, "[!,”,#,$,%,&,’,(,),*,+,-,.,/,:,;,<,=,>,?,@,[,\\,^,_,`,{,|,},~,\\[, \\] ]"))
                 sb.Append("Password should contain special chars" + Environment.NewLine);
 
             return sb.ToString();
