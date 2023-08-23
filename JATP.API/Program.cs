@@ -40,6 +40,7 @@ builder.Services.AddAuthentication(x =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryverysecrets...")),
         ValidateAudience = false,
         ValidateIssuer = false,
+        ClockSkew    = TimeSpan.Zero
     };
 });
 
